@@ -2,4 +2,7 @@
     <string name="app_name">DiceRoller</string>
     <string name="action_settings">Settings</string>
     <string name="button">Button</string>
+    <string name="roll_dice">ROLL DICE</string>
+    <string name="enter_a_number_below">Enter a number below:</string>
+    <string name="score">score:</string>
 </resources>

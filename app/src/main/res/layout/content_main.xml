@@ -10,58 +10,82 @@
 
     <Button
         android:id="@+id/rollDice"
-        android:layout_width="134dp"
-        android:layout_height="65dp"
-        android:background="#8C96D1"
+        android:layout_width="206dp"
+        android:layout_height="73dp"
+        android:background="#B4BBE9"
         android:onClick="button_click"
-        android:text="ROLL DICE"
+        android:text="@string/roll_dice"
         android:textColor="@android:color/white"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/enterNumber"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayCongrats"
-        app:layout_constraintVertical_bias="0.486" />
+        app:layout_constraintTop_toBottomOf="@+id/guess"
+        app:layout_constraintVertical_bias="0.681" />
 
     <EditText
         android:id="@+id/enterNumber"
-        android:layout_width="96dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="108dp"
+        android:layout_width="82dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:gravity="center"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
+        app:layout_constraintTop_toBottomOf="@+id/guess"
+        app:layout_constraintVertical_bias="0.311"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/displayCongrats"
-        android:layout_width="237dp"
-        android:layout_height="50dp"
+        android:layout_width="304dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="48dp"
         android:gravity="center_horizontal"
-        android:text="Hello World"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/enterNumber"
+        android:text="@string/enter_a_number_below"
+        android:textColor="#957EBE"
+        android:textSize="28sp"
+        app:fontFamily="sans-serif-light"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.598"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
+        app:layout_constraintVertical_bias="0.102" />
 
     <TextView
         android:id="@+id/userPoints"
         android:layout_width="121dp"
-        android:layout_height="95dp"
-        android:gravity="center_horizontal"
-        android:text="user points will be displayed here .."
+        android:layout_height="41dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="34dp"
+        android:gravity="start"
+        android:text="@string/score"
         android:textColor="@android:color/black"
-        android:textSize="15sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:textSize="20sp"
+        app:fontFamily="sans-serif-black"
+        app:layout_constraintBottom_toTopOf="@+id/displayCongrats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923" />
+
+    <TextView
+        android:id="@+id/guess"
+        android:layout_width="114dp"
+        android:layout_height="66dp"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displayCongrats"
+        app:layout_constraintVertical_bias="0.162" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
