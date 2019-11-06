@@ -1,5 +1,6 @@
 package com.example.diceroller;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -19,9 +20,17 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    // question variables
+    static String Q1 = "If you could go anywhere in the world, where would you go?";
+    static String Q2 = "If you were stranded on a desert island, what three things would you want to take with you?";
+    static String Q3 = "If you could eat only one food for the rest of your life, what would that be?";
+    static String Q4 = "If you won a million dollars, what is the first thing you would buy?";
+    static String Q5 = "If you could spend the day with one fictional character, who would it be?";
+    static String Q6 = "If you found a magic lantern and a genie gave you three wishes, what would you wish?";
 
     int score = 0;
     int number = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,38 +108,42 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void dicebreakers(View view) {
+    public void dicebreakers(View view) {   // switch statement for setting my questions - linked above
         TextView Questions = this.findViewById(R.id.displayCongrats);
 
         switch (number) {
             case 1:
-                Questions.setText("If you could go anywhere in the world, where would you go?");
+                Questions.setText(Q1);
                 break;
             case 2:
-                Questions.setText("If you were stranded on a desert island, what three things would you want to take with you?");
+                Questions.setText(Q2);
                 break;
             case 3:
-                Questions.setText("If you could eat only one food for the rest of your life, what would that be?");
+                Questions.setText(Q3);
                 break;
             case 4:
-                Questions.setText("If you won a million dollars, what is the first thing you would buy?");
+                Questions.setText(Q4);
                 break;
             case 5:
-                Questions.setText("If you could spend the day with one fictional character, who would it be?");
+                Questions.setText(Q5);
                 break;
             case 6:
-                Questions.setText("If you found a magic lantern and a genie gave you three wishes, what would you wish?");
+                Questions.setText(Q6);
                 break;
-
 
         }
 
     }
-    public int roll_the_dice() {
+    public int roll_the_dice() { // generates my random numbers for dice to roll
         Random r = new Random();
         int number = r.nextInt(6) + 1;
 
         return number;
     }
 
+    public void addQuestion(View view) { // on click - connects button from diceroller page --> adding new dicebreaker question page
+        startActivity(new Intent(MainActivity.this, DicebreakerQuestions.class));
+
+    }
 }
+

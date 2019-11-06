@@ -6,4 +6,11 @@
     <string name="lets_play_d_icebreakers">LETS PLAY D-ICEBREAKERS</string>
     <string name="score">score:</string>
     <string name="enter_a_number_below">ENTER A NUMBER BELOW</string>
+    <string name="button">Button</string>
+    <string name="write_your_new_question">write your new question</string>
+<!--    <string name="button">Button</string>-->
+<!--    <string name="button">Button</string>-->
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="enter_number">enter number</string>
 </resources>
