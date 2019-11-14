@@ -51,12 +51,11 @@ public class DicebreakerQuestions extends AppCompatActivity {
                 MainActivity.Q6 = newQuestion.getText().toString();
                 break;
 
-        default:
-            Toast.makeText(getApplicationContext(),"Please select valid numbers between 1-6",Toast.LENGTH_SHORT).show();
+            default:
+                Toast.makeText(getApplicationContext(),"Please select valid numbers between 1-6",Toast.LENGTH_SHORT).show();
 
         }
         startActivity(new Intent(DicebreakerQuestions.this, MainActivity.class ));
 
     }
 }
-
